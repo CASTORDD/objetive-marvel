@@ -1,5 +1,10 @@
 header {
   padding: 12px 42px;
+
+  @media (min-width: 576px) {
+    padding: 20px 42px;
+  }
+
   .header {
     &__title {
       position: relative;
@@ -7,11 +12,15 @@ header {
       font-size: 16px;
       line-height: 19px;
       margin: 0 0 12px 0;
-
+            
       span {
         display: none;
+        @media (min-width: 576px) {
+          display: inline-block;
+          float: right;
+        }
       }
-
+      
       &:after {
         content:"";
         position: absolute;
@@ -21,6 +30,11 @@ header {
         height: 2px;
         display: inline-block;
         background-color: #D42026;
+      }
+      
+      @media (min-width: 576px) {
+        font-size: 27px;
+        line-height: 32px;
       }
     }
   }

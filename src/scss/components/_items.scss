@@ -9,15 +9,30 @@
       line-height: 37px;
       display: inline-block;
       background-color: #D42026;
+     
 
       span {
         padding: 0 0 0 100px;
       }
     }
+    &-nome {
+      @media (min-width: 576px) {
+        max-width: 300px;
+        min-width: 300px !important;
+        margin: 0 10px 0 0;
+      }
+    }
     &-detalhes {
       display: none !important;
+      @media (min-width: 576px) {
+        display: inline-block !important;
+      }
+    }
+    @media (min-width: 576px) {
+      display:flex;
     }
   }
+  
   &__lista {
     max-height: calc(80vh - 87px);
     overflow-y: scroll;
@@ -35,6 +50,7 @@
       position: relative;
       width: 58px;
       height: 58px;
+      min-width: 58px;
       border-radius: 50%;
       overflow: hidden;
       margin: 0 25px 0 0;
@@ -44,12 +60,26 @@
       }
     }
     &__nome {
+      width: 250px;
+      min-width: 250px;
       color:  #4E4E4E;
       font-size: 21px;
       line-height: 24px;
+      @media (min-width: 576px) {
+        width: inherit;
+        min-width: 200px;
+        margin: 0 10px 0 0;
+      }
     }
     &__detalhe {
-      
+      display: none;
+      &-series {
+        max-width: 500px;
+      }
+      @media (min-width: 576px) {
+          display: inline-block;
+          padding: 0 0 0 20px;
+      }
     }
   }
   .paginado {

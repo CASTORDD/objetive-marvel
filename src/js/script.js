@@ -11,19 +11,16 @@ function getValues(){
   var param = res[1].split('=')
   
   if(param[0] === "page") {
-    console.log(param, 'test1')
     var param = res[1].split('&')
     var getPage = param[0].split('=')
     page = getPage[1]
   }
-  console.log(param)
+  
   if(param[0] === "txtSearch"){
-    console.log(res, 'test2')
     
     var param = res[1].split('&')
     var getTxt = param[0].split('=')
     txtSearch = getTxt[1]
-    console.log(txtSearch)
     
     var param = res[2].split('&')
     var getPage = param[0].split('=')
@@ -46,7 +43,6 @@ function onSearch(){
     var key = e.which || e.keyCode
     
     if(key == 13){
-      console.log(key)
       document.location.replace(`?txtSearch=${ txtSearch }?page=0`)
     }
   })
@@ -54,10 +50,10 @@ function onSearch(){
 onSearch()
 
 if( !txtSearch ){
-  console.log('data')
+  //console.log('data')
   var apiUrl = `https://kitsu.io/api/edge/characters?page[limit]=10&page[offset]=${ pageData }`
 } else {
-  console.log('data_paginado')
+  //console.log('data_paginado')
   var apiUrl = `https://kitsu.io/api/edge/characters?filter[name]=${ txtSearch }?page[limit]=10&page[offset]=${ pageData }`
 }
 
@@ -90,8 +86,7 @@ request.onreadystatechange = function () {
 
       const series = document.createElement('div')
       series.setAttribute('class', 'item__detalhe-series')
-      // let related = character.relationships.mediaCharacters.links.related
-      series.textContent = character.relationships.mediaCharacters.links.related
+      series.textContent = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. A rerum, magnam natus vel eaque labore nam.'
 
       const eventos = document.createElement('div')
       eventos.setAttribute('class', 'item__detalhe-eventos')
