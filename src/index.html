@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BUSCA KITSU</strong> TESTE FRONT-END</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="init()">
+  <div class="container">
+    <header>
+      <h1 class="header__title"><strong>BUSCA KITSU</strong> TESTE FRONT-END <span>DAVID ORJUELA</span></h1>
+      <form action="" class="search__box">
+        <label for="">
+          <span>Nome do Personagem</span>
+          <input id="txt__search" type="text" name="txtSearch" value="" placeholder="Digite o nome e pressione enter">
+        </label>
+      </form>
+    </header>
+    <main>
+      <div class="items">
+        <div class="items__head">
+          <div class="items__head-nome">
+            <span>Nome</span>
+          </div>
+          <div class="items__head-detalhes">
+            <span>Detalhes</span>
+          </div>
+        </div>
+        <div class="items__lista"></div>
+        <div class="paginado">
+          <a href="#" class="pag__arr btn__prev"><i class="fa fa-caret-left fa-2x"></i></a>
+          <div class="pages"></div>
+          <a href="#" class="pag__arr btn__next"><i class="fa fa-caret-right fa-2x"></i></a>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

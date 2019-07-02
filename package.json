@@ -1,0 +1,14 @@
+{
+  "name": "objetive-marvel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "font-awesome": "^4.7.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
